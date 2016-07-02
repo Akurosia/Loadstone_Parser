@@ -6,6 +6,9 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+def loastone_login():
+    print('http://na.finalfantasyxiv.com/lodestone/account/login/')
+
 #Get a page from the Loadstone
 # returns a BeautifulSoup object
 def get_loadstone_page(url,session_id):
@@ -19,7 +22,7 @@ def get_loadstone_page(url,session_id):
     if(raw_page.status_code != 200):
         raise Exception("Unable to download web page!")
 
-    return BeautifulSoup(raw_page.text)
+    return BeautifulSoup(raw_page.text,'html.parser')
 
 #Each item has a separate detail page that must be loaded to determine if it's HQ or not
 def is_item_hq(raw_item,session_id):
@@ -102,8 +105,11 @@ def get_retainer_selling(char_id,retainer_id,session_id):
     #Get retainers name
     retainer_name = soup_page.find("div", attrs={"class": 'retainer--name'}).p.text.strip()
     #Get all items
-    sale_inventory=soup_page.find("div", attrs={"class": 'active'})
-    raw_items=sale_inventory.find('tbody').find_all("tr")
+    sale_inventory=soup_page.find("div", attrs={"class": 'active'}).find('tbody')
+    #If no items, just return an empty set
+    if not sale_inventory:
+        return []
+    raw_items=sale_inventory.find_all("tr")
     #Parse the items
     items=[]
     for item in raw_items:
