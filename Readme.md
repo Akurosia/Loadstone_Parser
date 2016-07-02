@@ -12,6 +12,12 @@ Quite a bit.  The largest piece of missing functionality is the ability to log-i
 
 One major feature that is missing is seeing a character's own inventory.  The Loadstone doesn't appear to provide that information, so there is nothing we can do.
 
+#Installation
+First, install Python 3.  Then run these commands:
+```
+pip install requests
+pip install bs4
+```
 
 #How to Use
 
