@@ -1,0 +1,113 @@
+.feuerscherben{
+    background: url({yourDomain}/resources/png/ffxiv/feuer.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/scherbe.png) no-repeat left -5px top -4px;
+}
+.eisscherben{
+    background: url({yourDomain}/resources/png/ffxiv/eis.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/scherbe.png) no-repeat left -5px top -4px;
+}
+.windscherben{
+    background: url({yourDomain}/resources/png/ffxiv/wind.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/scherbe.png) no-repeat left -5px top -4px;
+}
+.erdescherben{
+    background: url({yourDomain}/resources/png/ffxiv/erde.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/scherbe.png) no-repeat left -5px top -4px;
+}
+.blitzscherben{
+    background: url({yourDomain}/resources/png/ffxiv/blitz.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/scherbe.png) no-repeat left -5px top -4px;
+}
+.wasserscherben{
+    background: url({yourDomain}/resources/png/ffxiv/wasser.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/scherbe.png) no-repeat left -5px top -4px;
+}
+.feuerkristalle{
+    background: url({yourDomain}/resources/png/ffxiv/feuer.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/kristall.png) no-repeat left -5px top -4px;
+}
+.eiskristalle{
+    background: url({yourDomain}/resources/png/ffxiv/eis.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/kristall.png) no-repeat left -5px top -4px;
+}
+.windkristalle{
+    background: url({yourDomain}/resources/png/ffxiv/wind.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/kristall.png) no-repeat left -5px top -4px;
+}
+.erdekristalle{
+    background: url({yourDomain}/resources/png/ffxiv/erde.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/kristall.png) no-repeat left -5px top -4px;
+}
+.blitzkristalle{
+    background: url({yourDomain}/resources/png/ffxiv/blitz.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/kristall.png) no-repeat left -5px top -4px;
+}
+.wasserkristalle{
+    background: url({yourDomain}/resources/png/ffxiv/wasser.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/kristall.png) no-repeat left -5px top -4px;
+}
+.feuerpolykristalle{
+    background: url({yourDomain}/resources/png/ffxiv/feuer.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/polykristall.png) no-repeat left -5px top -4px;
+}
+.eispolykristalle{
+    background: url({yourDomain}/resources/png/ffxiv/eis.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/polykristall.png) no-repeat left -5px top -4px;
+}
+.windpolykristalle{
+    background: url({yourDomain}/resources/png/ffxiv/wind.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/polykristall.png) no-repeat left -5px top -4px;
+}
+.erdepolykristalle{
+    background: url({yourDomain}/resources/png/ffxiv/erde.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/polykristall.png) no-repeat left -5px top -4px;
+}
+.blitzpolykristalle{
+    background: url({yourDomain}/resources/png/ffxiv/blitz.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/polykristall.png) no-repeat left -5px top -4px;
+}
+.wasserpolykristalle{
+    background: url({yourDomain}/resources/png/ffxiv/wasser.png) no-repeat left 5px top 6px, url({yourDomain}/resources/png/ffxiv/polykristall.png) no-repeat left -5px top -4px;
+}
+
+.crystals {
+  background-size: 40px 40px;
+  height: 40px;
+  width: 40px;
+  border: 1px solid;
+}
+
+body > div{
+   width: 1000px;
+   display: table;
+   padding-bottom: 3px;
+}
+
+#search{
+    width: 80%;
+}
+
+#searchbtn{
+    width: 20%;
+}
+
+table {
+    width: 100%;
+    border: 3px solid;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table td{
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+table th {
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+table td:nth-child(3), table td:nth-child(6) {
+    text-align: center;
+}
+
+table td:nth-child(2) {
+    text-align: right;
+}
+
+body div div input, #export2CSV {
+    float: right;
+    width: 95;
+    margin-top: 3px;
+}

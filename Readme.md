@@ -8,7 +8,9 @@ Final Fantasy XIV has multiple inventory areas.  Unfortunately, these areas scat
 
 #What's Missing
 
-Quite a bit.  The largest piece of missing functionality is the ability to log-in.  Once that's done the next focus is character information.  Things like character id, Free Company id, and retainer ids.  Those currently have to be manually input by the user.  Then we can focus on usability improvements, like making the data sortable in the browser.
+Quite a bit.  The largest piece of missing functionality is the ability to log-in.  
+Once that's done the next focus is character information.  
+Then we can focus on usability improvements, like making the data sortable in the browser.
 
 One major feature that is missing is seeing a character's own inventory.  The Loadstone doesn't appear to provide that information, so there is nothing we can do.
 
@@ -23,28 +25,22 @@ pip install bs4
 
 The first step is to obtain a valid session cookie.
 
-Currently players must manually visit `finalfantasyxiv.com/lodestone/` and log-in.  Next they need to press `ctrl+shift+c` to acess the debug menu of their browser.
+Currently players must manually visit `finalfantasyxiv.com/lodestone/` and log-in.  
+Next they need to press `ctrl+shift+c` to acess the debug menu of their browser.
 
-* On Chrome:  Select Resources, then Cookies, then the website.  Next right click the `Value` fiels of `ldst_sess` and select copy.
+* On Chrome:  
+Select Resources, then Cookies, then the website.  Next right click the `Value` fiels of `ldst_sess` and select copy.
 
+* On Firefox:  
+Select Web-Storage, then Cookies, then the website.  Next copy the value of `ldst_sess`.
 
-Next we need to obtain all of the ids.  These are strings of numbers for different pages in the URL bar.
+Paste the session_id into the appropriate field of `get_all_items.py` and run `get_all_items.py`
 
-* Free Company:
+<char_id>.html will now contain a list of all items the player can see.
 
-    ```
-    http://na.finalfantasyxiv.com/lodestone/my/#myfc
-    Click on the name of your Free Company
-    ```
+#Additions (NOT usefull for everyone)
+If you have an Apache with cgi enabled you can set "useHTML" to 'True' to enable directly access the result from a browser. (mostly only usefull for me ^^)
 
-* Character:
-    Click your name under `Character Profile`
+If you want to use filter and export functionality, you have to link the included css and js files + a jquery.js file (you can find this online easily).
 
-* Retainers:
-    From that page click `Retainers`
-    You will now need to select each individual retainer from the drop down menu, while copying each id from the URL bar.
-
-
-Paste all this information into the appropriate fields of `get_all_items.py` and run `get_all_items.py`
-
-Test.html will now contain a list of all items the player can see.
+For images of shards, crystals and polycrystals replace {yourDomain} inside css file and change the path to a correct location (in my case 1. url represented the crystal type and 2. url the elment).
