@@ -48,7 +48,10 @@ def main():
                 #print("No session_id found!")
 
 def html(character_id):
+    if(character_id != ""):
         print("<meta http-equiv=\"refresh\" content=\"0; URL=http://"+os.environ['SERVER_NAME']+"/cgi/"+character_id+".html\">")
+    else:
+        print("No or incorrect session_id!")
 
 if __name__ == "__main__":
     char_id = main()
